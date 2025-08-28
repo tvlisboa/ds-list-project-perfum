@@ -5,7 +5,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "tb_perfumes")
-public class Perfumes {
+public class Perfume {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,7 +23,7 @@ public class Perfumes {
      * Construtor vazio
      */
 
-    public Perfumes() {
+    public Perfume() {
     }
 
     /**
@@ -31,7 +31,7 @@ public class Perfumes {
      * e argumentos
      */
 
-    public Perfumes(Long id, String name, Double score,
+    public Perfume(Long id, String name, Double score,
                    Integer releaseYear, String genre,
                    String fraganceNotes, String imgUrl,
                    String shortDesc, String longDesc) {
@@ -126,8 +126,8 @@ public class Perfumes {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        Perfumes perfumes = (Perfumes) o;
-        return Objects.equals(id, perfumes.id);
+        Perfume perfume = (Perfume) o;
+        return Objects.equals(id, perfume.id);
     }
 
     @Override
