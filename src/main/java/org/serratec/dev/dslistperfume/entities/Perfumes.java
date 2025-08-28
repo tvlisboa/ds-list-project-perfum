@@ -10,7 +10,7 @@ public class Perfumes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String title;
+    private String name;
     private Double score;
     private Integer releaseYear;
     private String genre;
@@ -31,12 +31,12 @@ public class Perfumes {
      * e argumentos
      */
 
-    public Perfumes(Long id, String title, Double score,
+    public Perfumes(Long id, String name, Double score,
                    Integer releaseYear, String genre,
                    String fraganceNotes, String imgUrl,
                    String shortDesc, String longDesc) {
         this.id = id;
-        this.title = title;
+        this.name = name;
         this.score = score;
         this.releaseYear = releaseYear;
         this.genre = genre;
@@ -59,12 +59,12 @@ public class Perfumes {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Double getScore() {
