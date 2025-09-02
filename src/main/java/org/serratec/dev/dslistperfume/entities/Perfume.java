@@ -16,7 +16,11 @@ public class Perfume {
     private String genre;
     private String fraganceNotes;
     private String imgUrl;
+
+    @Column(columnDefinition = "TEXT")
     private String shortDescription;
+
+    @Column(columnDefinition = "TEXT")
     private String longDescription;
 
     /**
