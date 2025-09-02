@@ -10,14 +10,14 @@ public class Perfume {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
+    private String title;
     private Double score;
     private Integer releaseYear;
     private String genre;
     private String fraganceNotes;
     private String imgUrl;
-    private String shortDesc;
-    private String longDesc;
+    private String shortDescription;
+    private String longDescription;
 
     /**
      * Construtor vazio
@@ -31,19 +31,19 @@ public class Perfume {
      * e argumentos
      */
 
-    public Perfume(Long id, String name, Double score,
+    public Perfume(Long id, String title, Double score,
                    Integer releaseYear, String genre,
                    String fraganceNotes, String imgUrl,
-                   String shortDesc, String longDesc) {
+                   String shortDescription, String longDescription) {
         this.id = id;
-        this.name = name;
+        this.title = title;
         this.score = score;
         this.releaseYear = releaseYear;
         this.genre = genre;
         this.fraganceNotes = fraganceNotes;
         this.imgUrl = imgUrl;
-        this.shortDesc = shortDesc;
-        this.longDesc = longDesc;
+        this.shortDescription = shortDescription;
+        this.longDescription = longDescription;
     }
 
     /**
@@ -59,12 +59,12 @@ public class Perfume {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public Double getScore() {
@@ -107,20 +107,21 @@ public class Perfume {
         this.imgUrl = imgUrl;
     }
 
-    public String getShortDesc() {
-        return shortDesc;
+    public String getShortDescription() {
+        return shortDescription;
     }
 
-    public void setShortDesc(String shortDesc) {
-        this.shortDesc = shortDesc;
+    public void setShortDescription
+            (String shortDesc) {
+        this.shortDescription = shortDescription;
     }
 
-    public String getLongDesc() {
-        return longDesc;
+    public String getLongDescription() {
+        return longDescription;
     }
 
-    public void setLongDesc(String longDesc) {
-        this.longDesc = longDesc;
+    public void setLongDescription(String longDescription) {
+        this.longDescription = longDescription;
     }
 
     @Override
