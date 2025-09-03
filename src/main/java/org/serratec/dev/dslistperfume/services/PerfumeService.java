@@ -2,6 +2,7 @@ package org.serratec.dev.dslistperfume.services;
 import org.serratec.dev.dslistperfume.DTO.PerfumeDTO;
 import org.serratec.dev.dslistperfume.DTO.PrfMinDTO;
 import org.serratec.dev.dslistperfume.entities.Perfume;
+import org.serratec.dev.dslistperfume.projections.PerfumeMinProjection;
 import org.serratec.dev.dslistperfume.repositories.PerfumeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,5 +30,11 @@ public class PerfumeService {
         Perfume result = perfumeRepository.findById(perfumeid).get();
         PerfumeDTO dto = new PerfumeDTO(result);
         return dto;
+    }
+
+    @Transactional(readOnly = true)
+    public List<PrfMinDTO> findByList(Long listid){
+        List<PerfumeMinProjection> result = perfumeRepository.searchByList(listid);
+        return result.stream().map(x -> new PrfMinDTO(x)).toList();
     }
 }

@@ -78,3 +78,27 @@ INSERT INTO tb_belonging (list_id, perfume_id, position,title) VALUES (3, 7, 6,'
 INSERT INTO tb_belonging (list_id, perfume_id, position,title) VALUES (3, 8, 7,'Side Effect Initio Parfums Prives.');
 INSERT INTO tb_belonging (list_id, perfume_id, position,title) VALUES (3, 9, 8,'Millésime Impérial Creed.');
 INSERT INTO tb_belonging (list_id, perfume_id, position,title) VALUES (3, 10, 9,'Vanille Fatale Tom Ford.');
+
+
+--SELECT
+--tb_perfumes.id,
+    --tb_perfumes.title,
+    --tb_perfumes.release_year AS releaseYear,
+    --tb_perfumes.img_url AS imgUrl,
+    --tb_perfumes.short_description AS shortDescription
+--FROM tb_perfumes;
+
+
+--SELECT
+    --p.id,
+    --p.title,
+    --p.release_year AS releaseYear,
+    --p.img_url AS imgUrl,
+    --p.short_description AS shortDescription,
+    --b.position
+--FROM tb_perfumes p
+         --INNER JOIN tb_belonging b
+         --ON b.perfume_id = p.id
+--WHERE b.list_id = 1
+--ORDER BY b.position;
+
