@@ -1,6 +1,6 @@
 --listas de generos de perfumes
 INSERT INTO tb_perfume_list (name) VALUES ('MASCULINO');
-INSERT INTO tb_perfume_list (name) VALUES ('FEMINIO');
+INSERT INTO tb_perfume_list (name) VALUES ('FEMININO');
 INSERT INTO tb_perfume_list (name) VALUES ('COMPARTILHAVEL');
 
 --masculino
