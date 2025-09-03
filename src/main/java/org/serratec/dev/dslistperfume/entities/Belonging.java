@@ -14,6 +14,7 @@ public class Belonging {
     @EmbeddedId
     private BelongingPK id = new BelongingPK();
     private Integer position;
+    private String title;
 
    public Belonging(){
    }
@@ -38,6 +39,14 @@ public class Belonging {
 
     public void setPosition(Integer position) {
         this.position = position;
+    }
+
+    public String getTitle() {
+       return title;
+    }
+
+    public void setTitle(String title) {
+       this.title = title;
     }
 
     @Override
