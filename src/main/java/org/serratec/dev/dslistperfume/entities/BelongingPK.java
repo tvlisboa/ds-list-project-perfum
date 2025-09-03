@@ -7,6 +7,11 @@ import jakarta.persistence.ManyToOne;
 
 import java.util.Objects;
 
+/**
+ * A anotacao @Embeddable ela encapsula
+ * mais de um atributo para uma classe
+ */
+
 @Embeddable
 public class BelongingPK {
 
@@ -19,7 +24,7 @@ public class BelongingPK {
     private PerfumeList perfumeList;
 
     /**
-     * Construtor vazios
+     * Construtor vazio
      */
 
     public BelongingPK() {
