@@ -25,6 +25,11 @@ public class PerfumeService {
         return dto;
     }
 
+    /**
+     * Tipo de retorno sera um DTO
+     * onde ira buscar por ID
+     */
+
     @Transactional(readOnly = true)
     public PerfumeDTO findById(long perfumeid){
         Perfume result = perfumeRepository.findById(perfumeid).get();

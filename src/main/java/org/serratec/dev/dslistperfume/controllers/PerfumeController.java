@@ -3,7 +3,6 @@ package org.serratec.dev.dslistperfume.controllers;
 
 import org.serratec.dev.dslistperfume.DTO.PerfumeDTO;
 import org.serratec.dev.dslistperfume.DTO.PrfMinDTO;
-import org.serratec.dev.dslistperfume.entities.Perfume;
 import org.serratec.dev.dslistperfume.services.PerfumeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,7 +26,7 @@ public class PerfumeController {
         return result;
     }
 
-    @GetMapping(value = "{id}")
+    @GetMapping(value = "/{id}")
     public PerfumeDTO findById(@PathVariable Long id){
         PerfumeDTO result = perfumeService.findById(id);
         return result;
