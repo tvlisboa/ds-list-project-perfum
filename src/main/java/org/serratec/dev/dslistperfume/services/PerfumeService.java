@@ -38,8 +38,8 @@ public class PerfumeService {
     }
 
     @Transactional(readOnly = true)
-    public List<PrfMinDTO> findByList(Long listid){
-        List<PerfumeMinProjection> result = perfumeRepository.searchByList(listid);
+    public List<PrfMinDTO> findByList(Long listId){
+        List<PerfumeMinProjection> result = perfumeRepository.searchByList(listId);
         return result.stream().map(x -> new PrfMinDTO(x)).toList();
     }
 }

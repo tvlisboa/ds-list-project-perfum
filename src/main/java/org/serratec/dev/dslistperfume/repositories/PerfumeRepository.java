@@ -9,6 +9,14 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+
+/**
+ * o REPOSITORY como é responsavel pela
+ * consulta ao banco de dados
+ * fica associado a ele fazer uma consulta
+ * customizada SQL
+ */
+
 @Repository
 public interface PerfumeRepository extends JpaRepository<Perfume,Long> {
     @Query(nativeQuery = true, value = """
@@ -23,6 +31,6 @@ public interface PerfumeRepository extends JpaRepository<Perfume,Long> {
         WHERE tb_belonging.list_id = :listId
         ORDER BY tb_belonging.position
         """)
-    List<PerfumeMinProjection> searchByList(@Param("listId") Long listId);
+    List<PerfumeMinProjection> searchByList(Long listId);
 }
 
