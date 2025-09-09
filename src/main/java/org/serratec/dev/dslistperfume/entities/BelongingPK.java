@@ -1,7 +1,6 @@
 package org.serratec.dev.dslistperfume.entities;
 
 import jakarta.persistence.Embeddable;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
