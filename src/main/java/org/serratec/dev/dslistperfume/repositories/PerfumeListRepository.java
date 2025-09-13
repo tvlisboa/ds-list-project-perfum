@@ -9,6 +9,11 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PerfumeListRepository extends JpaRepository<PerfumeList,Long> {
 
+    /**
+     * Funcao feita para a reordenacao na lista das
+     * posicoes dos perfumes
+     */
+
     @Modifying
     @Query(nativeQuery = true, value = "UPDATE tb_belonging SET position = :newPosition " +
             "WHERE list_id = :listId AND perfume_id = :perfumeId ")

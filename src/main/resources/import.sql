@@ -102,3 +102,11 @@ INSERT INTO tb_belonging (list_id, perfume_id, position,title) VALUES (3, 10, 9,
 --WHERE b.list_id = 1
 --ORDER BY b.position;
 
+-- SELECT * FROM TB_BELONGING
+-- WHERE LIST_ID = 1
+-- ORDER BY POSITION
+
+-- SELECT TB_BELONGING .*, TB_PERFUMES.TITLE FROM TB_BELONGING
+--                                                    INNER JOIN TB_PERFUMES ON TB_PERFUMES.ID = TB_BELONGING.PERFUME_ID
+-- WHERE LIST_ID = 1
+-- ORDER BY POSITION

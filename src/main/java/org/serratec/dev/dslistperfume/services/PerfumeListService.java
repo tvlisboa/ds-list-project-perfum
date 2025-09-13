@@ -24,7 +24,23 @@ public class PerfumeListService {
         return result.stream().map(x->new PerfumeListDTO(x)).toList();
     }
 
-    public void move(Long listId, int sourceIndex, int targetIndex) {
+    /**
+     * Metodo para fazer a reordenacao na lista
+     * Rever esse conteudo, entendi nada no for.
+     */
+
+
+    @Transactional
+    public void move(Long listId, int sourceIndex, int destinationIndex) {
         List<PerfumeMinProjection> list = perfumeRepository.searchByList(listId);
+        PerfumeMinProjection obj = list.remove(sourceIndex);
+        list.add(destinationIndex, obj);
+
+        int min = sourceIndex < destinationIndex ? sourceIndex : destinationIndex;
+        int max = sourceIndex < destinationIndex ? destinationIndex : sourceIndex;
+
+        for(int i=min; i<=max; i++){
+            perfumeListRepository.updateBelonging(listId, list.get(i).getId(),i);
+        }
     }
 }
